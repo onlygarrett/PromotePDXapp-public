@@ -1,0 +1,88 @@
+.pdx-about-body {
+  /* padding: 2rem;
+  margin: 2 0 0 0;
+  background-color: black;
+  text-align: center; */
+  display: flex;
+  gap: 2%;
+  flex-direction: row;
+  align-content: start;
+  justify-content: center;
+  gap: 30px;
+}
+
+.content-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 75%;
+}
+
+.about-content {
+  flex-grow: 1;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 1.1vw;
+  color: #cdbda6;
+  font-family: "Inter-Regular", Sans;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.6em;
+  text-align: left;
+}
+
+.about-image-container {
+  display: flex;
+  flex-grow: 1;
+  width: 70vw;
+  height: 70vh;
+}
+
+@media (max-width: 900px) {
+  .pdx-about-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .main-card-header {
+    font-family: "Chalets", serif;
+    font-size: 5.5vw;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .about-content-container {
+    width: 90%;
+  }
+
+  .about-image-container {
+    display: flex;
+    flex-grow: 1;
+    width: 75vw;
+    height: 25vh;
+  }
+
+  .content-container {
+    width: 85vw !important;
+  }
+
+  .about-content {
+    font-size: 15px;
+  }
+
+  /* .about-image { */
+  /*   width: 100%; */
+  /* } */
+
+}
+
+@media (max-width: 1000px) {
+  .about-content {
+    font-size: 10px;
+  }
+
+}

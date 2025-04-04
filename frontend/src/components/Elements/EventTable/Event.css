@@ -1,0 +1,330 @@
+.event-list-container {
+  position: relative;
+  z-index: 1;
+}
+
+.events-list {
+  margin: 2em 0 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 1em;
+  position: relative;
+  z-index: 1;
+}
+
+.event-card {
+  width: 23.5%;
+
+  height: 23.5%;
+  color: #cdbda6;
+  position: relative;
+  z-index: 1;
+}
+
+.left-card-flex {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-card-flex {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  container-type: inline-size;
+}
+
+.event-artist {
+  /* font-size: 3.4cqmin; */
+  margin-top: 0;
+  font-weight: bold;
+  text-align: center;
+  resize: both;
+}
+
+.event-date {
+  font-size: 19px;
+  margin-top: 0px;
+  margin-left: 2px;
+  text-align: left;
+  width: 80%;
+}
+
+.event-venue {
+  font-size: 15px;
+  margin: 1px;
+  text-align: left;
+  margin-top: auto;
+  width: 80%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.event-time {
+  font-size: 15px;
+  text-align: left;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  width: 50%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.pagination-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10em;
+}
+
+.pagination-button {
+  color: white;
+  font-size: 22px;
+}
+
+.pagination-counter {
+  color: white;
+  font-size: 22px;
+}
+
+.filters {
+  margin: 10px 0;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3em;
+  scale: 1.4;
+  position: relative;
+  z-index: 999;
+}
+
+@media (max-width: 900px) {
+  .filters {
+    flex-direction: column;
+    margin-bottom: 5vh;
+    margin-top: 1vh;
+    scale: 1;
+    width: 100%;
+  }
+
+  .filters input {
+    width: 45vw;
+  }
+
+  .filters select {
+    width: 45vw;
+  }
+
+  .date-picker-container {
+    width: 45vw;
+  }
+
+  .events-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .event-card {
+    width: 90%;
+  }
+
+  .pagination-controls {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .pagination-button {
+    width: 45vw;
+  }
+}
+
+.filters input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.filters select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.clear-button {
+  padding: 12px 12px;
+  font-size: 8px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background-color: #d32f2f;
+}
+
+.clear-button {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  border: none;
+  background: rgba(180, 83, 107, 0.584);
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.clear-close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.clear-button:hover {
+  background-color: rgb(211, 21, 21);
+}
+
+.clear-button:active {
+  background-color: rgb(130, 0, 0);
+}
+
+.clear-button:hover>.clear-close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes clear-close {
+  100% {
+    opacity: 1;
+  }
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  /* Position above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+  /* Grey out disabled button */
+  color: #666;
+}
+
+.date-picker-container {
+  width: auto;
+  max-width: 400px;
+  background: white;
+  position: relative;
+  z-index: 1000 !important;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.react-daterange-picker__calendar {
+  position: absolute;
+  z-index: 1000 !important;
+}
+
+.react-daterange-picker__inputGroup__input {
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border: none !important;
+  padding: 0 !important;
+  font-style: normal;
+}
+
+.react-calendar__tile react-calendar__month-view__days__day {
+  color: black;
+}
+
+.react-daterange-picker__wrapper {
+  border: none !important;
+}
+
+.react-calendar {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.venue-select {
+  width: 13.5%;
+}
+
+.pagination-button {
+  color: #848282;
+  scale: 1.3;
+}
+
+.pagination-counter {
+  font-size: 2.3em;
+}

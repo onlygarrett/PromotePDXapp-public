@@ -1,0 +1,148 @@
+.pdx-contact-body {
+  display: flex;
+  gap: 2%;
+  flex-direction: row;
+  align-content: start;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+Form {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 30px 30px 30px 30px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 75%;
+  color: white;
+  margin: 2em;
+}
+
+.ui.form .field>label {
+  color: white;
+  font-size: 1.3em;
+}
+
+.ui.form ::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.ui.input>input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.ui.form {
+  display: flex;
+  flex-direction: column;
+}
+
+button.ui {
+  width: 100%;
+  scale: unset;
+}
+
+.contact-content {
+  display: flex;
+  scale: unset;
+  width: 50%;
+}
+
+.ui.form .field {
+  width: 100%;
+  max-width: 100%;
+}
+
+.ui.form .fields {
+  width: 100%;
+  max-width: 100%;
+}
+
+.ui.form .field .ui.input input,
+.ui.form .fields .field .ui.input input {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+.contact-info-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  color: #cdbda6;
+  text-align: left;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-size: 1.3vw;
+  color: #cdbda6;
+  font-family: "Inter-Regular", Sans;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-transform: none;
+  line-height: 1.6em;
+  width: 40%;
+}
+
+.item:nth-child(1) {
+  width: 100%;
+  flex-grow: 1;
+  height: auto;
+}
+
+.item:nth-child(2),
+.item:nth-child(3),
+.item:nth-child(4) {
+  width: 100%;
+  flex-grow: 2;
+}
+
+.contact-info-header {
+  display: flex;
+  font-family: "Chalets", serif;
+  font-weight: 400;
+  font-style: normal;
+  justify-content: flex-start;
+}
+
+.contact-card-header {
+  font-family: "Chalets", serif;
+  text-align: left;
+  margin: 0 !important;
+  font-size: 2em;
+}
+
+@media (max-width: 900px) {
+  .pdx-contact-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-info-container {
+    width: 90%;
+    font-size: 1.5em;
+  }
+
+  
+  .contact-card-header {
+    font-family: "Chalets", serif;
+    line-height: 1.1;
+    text-align: left;
+    margin: 0 !important;
+    font-size: 2em;
+  }
+  .contact-info-header {
+    font-family: "Chalets", serif;
+    font-size: 1.3vw;
+  }
+
+}

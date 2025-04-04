@@ -1,0 +1,20 @@
+.pdx-home-body {
+  margin: 4em 0 0 0;
+  background-color: black;
+  text-align: center;
+}
+
+.carousel-header-container {
+  width: auto;
+  margin: 3em 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-header {
+  font-size: calc(50px + 2vmin);
+  width: 900px;
+  font-family: "Bigshot One", serif;
+
+  color: #cdbda6;
+}

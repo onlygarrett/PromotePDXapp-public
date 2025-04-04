@@ -1,0 +1,94 @@
+.main-card-with-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  row-gap: 0px;
+  column-gap: 0px;
+  color: #cdbda6;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5.5em;
+  align-items: center;
+  scale: 1.7;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+}
+
+
+
+.main-card-content {
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.main-card-with-buttons-header {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 3em;
+  font-size: 10px;
+  font-family: "Chalets", serif;
+}
+
+.main-card-header {
+  font-family: "Chalets", serif;
+  /* font-size: calc(2.6 * 2rem); */
+  font-size: 3.5vw;
+}
+
+.main-card-header-text {
+  font-family: "Chalets", serif;
+  display: inline-block;
+  /* height: 450px; */
+  padding-bottom: 50px;
+}
+.main-card-header-text-svg {
+  display: inline-block;
+  height: 40vh;
+  width: 55vw;
+  padding-bottom: 50px;
+  /* position: absolute; */
+}
+
+@media (max-width: 900px) {
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  .main-card-header-text-svg {
+    display: inline-block;
+    height: 20vh;
+    width: 60vw;
+    padding-bottom: 50px;
+    /* position: absolute; */
+  }
+  
+  .main-card-header-text {
+    font-family: "Chalets", serif;
+    display: inline-block;
+    line-height: 1.2;
+    font-size: 5.5vw;
+    /* height: 450px; */
+    padding-bottom: 50px;
+  }
+  .main-card-header {
+    font-family: "Chalets", serif;
+    /* font-size: calc(2.6 * 2rem); */
+    font-size: 5.5vw;
+    line-height: 1.2;
+  }
+
+
+}

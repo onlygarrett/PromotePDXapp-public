@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+  background: black;
+}
+
+#container {
+  position: relative;
+  margin: auto;
+  width: 100vw;
+  height: 40vh;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  filter: url(#threshold) blur(0.6px);
+}
+
+.text1,
+.text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+
+  font-size: 3em;
+
+  text-align: center;
+  transition: opacity 0.5s, filter 0.5s;
+}
+
+.filters {
+  display: none;
+  /* Hide the SVG element */
+}
+
+.main-card-header-text-svg {
+  display: inline-block;
+  height: 40vh;
+  width: 60vw;
+  padding-bottom: 50px;
+  /* position: absolute; */
+}
